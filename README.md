@@ -5,5 +5,7 @@ Playing with how to track state changes to a page when it make sense to support 
 To get it running:
 
 cd vue_state_track
+
 yarn install
+
 quasar dev
