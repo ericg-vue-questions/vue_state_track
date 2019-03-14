@@ -2,20 +2,14 @@
 const routes = [
   {
     path: '/',
-    name: 'front',
+    name: 'empty-layout',
     component: () => import('layouts/MyLayout.vue'),
     children: [
-      { path: '',
+      { path: ''
+        name: 'front',
         component: () => import('pages/Index.vue')
-      }
-    ]
-  },
-  {
-    path: '/level/',
-    component: () => import('layouts/MyLayout.vue'),
-    children: [
-      {
-        path: ':lvl',
+      },
+      { path: 'level/:lvl',
         name: 'level',
         component: () => import('pages/Index.vue'),
         props: (route) => {
@@ -25,7 +19,6 @@ const routes = [
         }
       }
     ]
-
   }
 ]
 
