@@ -46,14 +46,14 @@ export default {
 
   methods: {
     clickMethod (value) {
-      console.log(value)
-      this.$router.push({ name: 'front', query: { lvl: value } })
+      console.log('value clicked: ' + value)
+      this.$router.push({ name: 'level', params: { lvl: value } })
     },
 
     close () {
       console.log('close')
 
-      this.$router.push({ name: 'front', query: { lvl: -1 } })
+      this.$router.push('/')
     }
   }
 }
